@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mayikt.mapper.SysMenuMapper">
+    <resultMap id="BaseResultMap" type="sysMenu">
+        <id column="menu_id" jdbcType="BIGINT" property="menuId" />
+        <result column="parent_id" jdbcType="BIGINT" property="parentId" />
+        <result column="menu_name" jdbcType="VARCHAR" property="menuName" />
+        <result column="menu_url" jdbcType="VARCHAR" property="menuUrl" />
+        <result column="auth_tag" jdbcType="VARCHAR" property="authTag" />
+        <result column="menu_type" jdbcType="TINYINT" property="menuType" />
+        <result column="sort" jdbcType="TINYINT" property="sort" />
+        <result column="remark" jdbcType="VARCHAR" property="remark" />
+        <result column="status" jdbcType="TINYINT" property="status" />
+        <result column="icon" jdbcType="VARCHAR" property="icon" />
+        <result column="show_flag" jdbcType="TINYINT" property="showFlag" />
+    </resultMap>
+
+    <select id="getMenus" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select * from ( SELECT
+        t3.*
+        FROM
+            sys_user_role t1
+        LEFT JOIN sys_role_menu t2 ON t1.role_id = t2.role_id
+        LEFT JOIN sys_menu t3 ON t2.menu_id = t3.menu_id
+        WHERE
+            t1.user_id = #{userId} and t3.status=0
+        GROUP BY
+            t3.menu_id ) t4 order by t4.sort asc
+    </select>
+
+</mapper>
