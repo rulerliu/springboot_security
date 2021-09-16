@@ -1,6 +1,6 @@
 spring:
   application:
-    name: busi_user
+    name: cloud-user
   jackson:
     timeZone: GMT+8
     date-format: yyyy-MM-dd HH:mm:ss:SSS
@@ -22,6 +22,11 @@ spring:
     port: 6379
     password: 123456
     timeout: 1000
+    database: 1
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
 
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
@@ -30,4 +35,54 @@ mybatis-plus:
     default-statement-timeout: 3 # 查询超时间,单位秒,不设置则无线等待
     default-fetch-size: 100
     map-underscore-to-camel-case: true
-  type-aliases-package: com.mayikt.model
+  type-aliases-package: com.mayikt.user.model
+
+redis:
+  database: csg_cloud
+  key:
+    admin: 'ums:admin'
+    resourceList: 'ums:resourceList'
+    roleList: 'ums:roleList'
+    standerList: 'ums:standerList'
+    sysOrg: 'ums:sysOrg'
+  expire:
+    common: 86400
+
+jwt:
+  tokenHeader: Authorization
+  secret: csgcloud123456
+  expiration: 604800
+  tokenHead: Bearer
+
+# 请求白名单
+secure:
+  ignored:
+    urls:
+      - /swagger-ui.html
+      - /swagger-resources/**
+      - /swagger/**
+      - /**/v2/api-docs
+      - /**/*.js
+      - /**/*.css
+      - /**/*.png
+      - /**/*.jpg
+      - /**/*.ico
+      - /webjars/springfox-swagger-ui/**
+      - /actuator/**
+      - /druid/**
+      - /*/user/login
+      - /*/user/logout
+      - /captcha.jpg
+      - /*/ossFile/getYestodayFiles
+      - /*/ossFile/deleteByFileId/*
+      - /*/ossFile/deleteByFileIds
+      - /*/ossFile/getByFileId/*
+      - /*/info/getProjectInfoById/*
+      - /*/stage/getStageById/*
+      - /*/proProjectResult/getSimpleTreeList
+      - /*/proProjectResult/getPartTreeList
+      - /test
+
+init:
+  password: abcd1234
+name: xiaoming4

@@ -20,6 +20,11 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/csg_cloud?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&autoReconnect=true&useSSL=false
     username: root
     password: root
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
 
 mybatis-plus:
   mapper-locations: classpath:mapper/*.xml
@@ -28,7 +33,7 @@ mybatis-plus:
     default-statement-timeout: 3 # 查询超时间,单位秒,不设置则无线等待
     default-fetch-size: 100
     map-underscore-to-camel-case: true
-  type-aliases-package: com.mayikt.model
+  type-aliases-package: com.mayikt.user.model
 
 jwt:
   tokenHeader: Authorization
@@ -74,6 +79,7 @@ secure:
       - /*/stage/getStageById/*
       - /*/proProjectResult/getSimpleTreeList
       - /*/proProjectResult/getPartTreeList
+      - /test
 init:
   password: abcd1234
 name: xiaoming4
