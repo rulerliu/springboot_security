@@ -1,7 +1,7 @@
 package com.mayikt.user.api;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.mayikt.api.user.bo.OrgTreeRspBO;
+import com.mayikt.bo.OrgTreeRspBO;
 import com.mayikt.user.bo.SysOrgReqBO;
 import com.mayikt.user.model.SysOrg;
 import org.springframework.stereotype.Repository;

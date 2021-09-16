@@ -1,4 +1,4 @@
-package com.mayikt.api.user.bo;
+package com.mayikt.bo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

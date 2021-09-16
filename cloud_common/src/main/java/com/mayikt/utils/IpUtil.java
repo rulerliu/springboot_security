@@ -1,4 +1,4 @@
-package com.mayikt.security.utils;
+package com.mayikt.utils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.net.InetAddress;

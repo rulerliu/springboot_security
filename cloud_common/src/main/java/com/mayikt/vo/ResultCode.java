@@ -1,4 +1,4 @@
-package com.mayikt.security.vo;
+package com.mayikt.vo;
 
 public enum ResultCode implements IErrorCode {
     SUCCESS(200, "操作成功"),

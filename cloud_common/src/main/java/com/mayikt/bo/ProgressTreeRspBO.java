@@ -1,4 +1,4 @@
-package com.mayikt.api.user.bo;
+package com.mayikt.bo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.annotations.ApiModelProperty;

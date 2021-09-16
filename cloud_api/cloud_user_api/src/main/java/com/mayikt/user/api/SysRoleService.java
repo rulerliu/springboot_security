@@ -1,10 +1,10 @@
 package com.mayikt.user.api;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.mayikt.security.vo.CommonResult;
 import com.mayikt.user.bo.SysRoleReqBO;
 import com.mayikt.user.bo.SysRoleRspBO;
 import com.mayikt.user.model.SysRole;
+import com.mayikt.vo.CommonResult;
 import org.springframework.security.core.Authentication;
 
 import java.util.List;

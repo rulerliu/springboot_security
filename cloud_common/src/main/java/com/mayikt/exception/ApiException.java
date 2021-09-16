@@ -1,6 +1,7 @@
-package com.mayikt.security.exception;
+package com.mayikt.exception;
 
-import com.mayikt.security.vo.IErrorCode;
+
+import com.mayikt.vo.IErrorCode;
 
 public class ApiException extends RuntimeException {
     private IErrorCode errorCode;

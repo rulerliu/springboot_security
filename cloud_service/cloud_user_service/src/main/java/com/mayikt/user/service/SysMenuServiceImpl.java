@@ -2,7 +2,7 @@ package com.mayikt.user.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.mayikt.api.user.bo.TreeRspBO;
+import com.mayikt.bo.TreeRspBO;
 import com.mayikt.user.api.SysMenuService;
 import com.mayikt.user.bo.SysMenuReqBO;
 import com.mayikt.user.mapper.SysMenuMapper;

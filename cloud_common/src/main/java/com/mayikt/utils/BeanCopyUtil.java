@@ -1,4 +1,4 @@
-package com.mayikt.security.utils;
+package com.mayikt.utils;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cglib.beans.BeanCopier;

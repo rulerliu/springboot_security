@@ -1,4 +1,4 @@
-package com.mayikt.security.vo;
+package com.mayikt.vo;
 
 public interface IErrorCode {
     long getCode();

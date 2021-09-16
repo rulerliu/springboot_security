@@ -1,4 +1,4 @@
-package com.mayikt.security.vo;
+package com.mayikt.vo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

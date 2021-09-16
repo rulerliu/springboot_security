@@ -1,9 +1,9 @@
 package com.mayikt.security.utils;
 
+import com.mayikt.exception.ApiException;
 import com.mayikt.security.bo.AdminUserDetails;
-import com.mayikt.security.exception.ApiException;
-import com.mayikt.security.vo.ResultCode;
 import com.mayikt.user.model.SysRole;
+import com.mayikt.vo.ResultCode;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

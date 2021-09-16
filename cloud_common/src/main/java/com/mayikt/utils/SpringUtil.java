@@ -1,4 +1,4 @@
-package com.mayikt.security.utils;
+package com.mayikt.utils;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

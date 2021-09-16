@@ -1,7 +1,7 @@
 package com.mayikt.user.service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.mayikt.api.user.bo.OrgTreeRspBO;
+import com.mayikt.bo.OrgTreeRspBO;
 import com.mayikt.user.api.SysOrgService;
 import com.mayikt.user.bo.SysOrgReqBO;
 import com.mayikt.user.mapper.SysOrgMapper;

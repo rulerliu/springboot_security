@@ -1,4 +1,4 @@
-//package com.mayikt.vo;
+package com.mayikt.vo;//package com.mayikt.vo;
 //
 //
 //import com.github.pagehelper.PageInfo;

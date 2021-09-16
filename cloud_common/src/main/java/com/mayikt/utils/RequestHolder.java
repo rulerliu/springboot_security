@@ -1,4 +1,4 @@
-package com.mayikt.security.utils;
+package com.mayikt.utils;
 
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
