@@ -1,4 +1,4 @@
-package com.mayikt.security.config;
+package com.mayikt.user.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.cors.CorsConfiguration;

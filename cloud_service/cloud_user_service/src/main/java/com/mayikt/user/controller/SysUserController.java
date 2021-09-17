@@ -36,7 +36,6 @@ public class SysUserController {
 
     @ApiOperation("用户登录")
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    @ResponseBody
     public CommonResult login(@RequestParam String username,
                               @RequestParam String password,
                               @RequestParam(required = false) String ipAddress,
@@ -53,7 +52,6 @@ public class SysUserController {
 
     @ApiOperation("外部用户登录接口")
     @RequestMapping(value = "/getToken", method = RequestMethod.POST)
-    @ResponseBody
     public CommonResult getToken(@RequestParam String account,
                                  @RequestParam String password,
                                  @RequestParam(required = false) String ipAddress,
@@ -71,7 +69,6 @@ public class SysUserController {
 
     @ApiOperation(value = "登出功能")
     @RequestMapping(value = "/logout", method = RequestMethod.POST)
-    @ResponseBody
     public CommonResult logout() {
         sysUserService.logout();
         return CommonResult.success(null);

@@ -1,18 +1,18 @@
 package com.mayikt.user.model;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ApiModel(value = "用户角色")
-public class SysUserRole implements Serializable {
+public class SysUserRole {
+    @TableId("user_role_id")
     @ApiModelProperty(value = "序号")
     private Long userRoleId;
 

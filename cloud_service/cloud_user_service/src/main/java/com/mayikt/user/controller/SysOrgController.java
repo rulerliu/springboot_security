@@ -2,6 +2,7 @@ package com.mayikt.user.controller;
 
 import com.mayikt.user.api.SysOrgService;
 import com.mayikt.user.model.SysOrg;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/org")
+@Api(tags = "SysOrgController", description = "机构管理")
 public class SysOrgController {
 
     @Autowired

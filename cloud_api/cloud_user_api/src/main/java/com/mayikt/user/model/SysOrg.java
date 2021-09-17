@@ -1,15 +1,16 @@
 package com.mayikt.user.model;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
-import java.io.Serializable;
 import java.util.Date;
 
 @Data
 @ApiModel(value = "机构")
-public class SysOrg implements Serializable {
+public class SysOrg {
+    @TableId("org_id")
     @ApiModelProperty(value = "机构ID")
     private Long orgId;
 

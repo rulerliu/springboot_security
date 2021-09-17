@@ -1,5 +1,6 @@
 package com.mayikt.user.model;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -10,6 +11,7 @@ import java.util.Date;
 @Data
 @ApiModel(value = "角色")
 public class SysRole implements Serializable {
+    @TableId("role_id")
     @ApiModelProperty(value = "角色ID")
     private Long roleId;
 

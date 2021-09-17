@@ -65,23 +65,13 @@ secure:
       - /**/*.js
       - /**/*.css
       - /**/*.png
-      - /**/*.jpg
       - /**/*.ico
       - /webjars/springfox-swagger-ui/**
       - /actuator/**
       - /druid/**
-      - /*/user/login
-      - /*/user/logout
-      - /captcha.jpg
-      - /*/ossFile/getYestodayFiles
-      - /*/ossFile/deleteByFileId/*
-      - /*/ossFile/deleteByFileIds
-      - /*/ossFile/getByFileId/*
-      - /*/info/getProjectInfoById/*
-      - /*/stage/getStageById/*
-      - /*/proProjectResult/getSimpleTreeList
-      - /*/proProjectResult/getPartTreeList
-      - /test
+      - /system/user/login
+      - /system/user/logout
+      - /system/user/getToken
 
 init:
   password: abcd1234

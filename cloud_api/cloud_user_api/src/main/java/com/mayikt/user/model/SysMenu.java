@@ -1,14 +1,14 @@
 package com.mayikt.user.model;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
-import java.io.Serializable;
-
 @Data
 @ApiModel(value = "菜单")
-public class SysMenu implements Serializable {
+public class SysMenu {
+    @TableId("menu_id")
     @ApiModelProperty(value = "菜单ID")
     private Long menuId;
 

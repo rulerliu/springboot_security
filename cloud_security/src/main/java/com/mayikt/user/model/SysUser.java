@@ -1,5 +1,6 @@
 package com.mayikt.user.model;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -11,6 +12,7 @@ import java.io.Serializable;
 @ApiModel(value = "用户")
 @TableName("sys_user")
 public class SysUser implements Serializable {
+    @TableId("user_id")
     @ApiModelProperty(value = "用户ID")
     private Long userId;
 

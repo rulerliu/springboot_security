@@ -1,5 +1,6 @@
 package com.mayikt.user.model;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -15,6 +16,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @ApiModel(value = "角色菜单")
 public class SysRoleMenu implements Serializable {
+    @TableId("role_menu_id")
     @ApiModelProperty(value = "序号")
     private Long roleMenuId;
 

@@ -1,13 +1,14 @@
 package com.mayikt.user.model;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import io.swagger.annotations.ApiModelProperty;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 
-public class SysLoginLog implements Serializable {
+public class SysLoginLog {
+    @TableId("log_id")
     @ApiModelProperty(value = "日志ID")
     private Long logId;
 

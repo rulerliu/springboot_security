@@ -1,85 +1,88 @@
-server:
-  port: 8888
-
-spring:
-  application:
-    name: security
-  jackson:
-    timeZone: GMT+8
-    date-format: yyyy-MM-dd HH:mm:ss:SSS
-    default-property-inclusion: non_null
-    parser:
-      allow-single-quotes: true
-    serialization:
-      fail-on-empty-beans: false
-    deserialization:
-      fail-on-unknown-properties: false
-  datasource:
-    name: hikariDataSource
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/csg_cloud?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&autoReconnect=true&useSSL=false
-    username: root
-    password: root
-  cloud:
-    nacos:
-      discovery:
-        server-addr: localhost:8848
-
-
-mybatis-plus:
-  mapper-locations: classpath:mapper/*.xml
-  configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-    default-statement-timeout: 3 # 查询超时间,单位秒,不设置则无线等待
-    default-fetch-size: 100
-    map-underscore-to-camel-case: true
-  type-aliases-package: com.mayikt.user.model
-
-jwt:
-  tokenHeader: Authorization
-  secret: csgcloud123456
-  expiration: 604800
-  tokenHead: Bearer
-
-redis:
-  database: csg_cloud
-  key:
-    admin: 'ums:admin'
-    resourceList: 'ums:resourceList'
-    roleList: 'ums:roleList'
-    standerList: 'ums:standerList'
-    sysOrg: 'ums:sysOrg'
-  expire:
-    common: 86400
-
-# 请求白名单
-secure:
-  ignored:
-    urls:
-      - /swagger-ui.html
-      - /swagger-resources/**
-      - /swagger/**
-      - /**/v2/api-docs
-      - /**/*.js
-      - /**/*.css
-      - /**/*.png
-      - /**/*.jpg
-      - /**/*.ico
-      - /webjars/springfox-swagger-ui/**
-      - /actuator/**
-      - /druid/**
-      - /*/user/login
-      - /*/user/logout
-      - /captcha.jpg
-      - /*/ossFile/getYestodayFiles
-      - /*/ossFile/deleteByFileId/*
-      - /*/ossFile/deleteByFileIds
-      - /*/ossFile/getByFileId/*
-      - /*/info/getProjectInfoById/*
-      - /*/stage/getStageById/*
-      - /*/proProjectResult/getSimpleTreeList
-      - /*/proProjectResult/getPartTreeList
-      - /test
-init:
-  password: abcd1234
-name: xiaoming4
+#server:
+#  port: 8888
+#
+#spring:
+#  application:
+#    name: security
+#  jackson:
+#    timeZone: GMT+8
+#    date-format: yyyy-MM-dd HH:mm:ss:SSS
+#    default-property-inclusion: non_null
+#    parser:
+#      allow-single-quotes: true
+#    serialization:
+#      fail-on-empty-beans: false
+#    deserialization:
+#      fail-on-unknown-properties: false
+#  datasource:
+#    name: hikariDataSource
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://127.0.0.1:3306/csg_cloud?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&autoReconnect=true&useSSL=false
+#    username: root
+#    password: root
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: localhost:8848
+#
+#
+#mybatis-plus:
+#  mapper-locations: classpath:mapper/*.xml
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    default-statement-timeout: 3 # 查询超时间,单位秒,不设置则无线等待
+#    default-fetch-size: 100
+#    map-underscore-to-camel-case: true
+#  type-aliases-package: com.mayikt.user.model
+#
+#jwt:
+#  tokenHeader: Authorization
+#  secret: csgcloud123456
+#  expiration: 604800
+#  tokenHead: Bearer
+#
+#redis:
+#  database: csg_cloud
+#  key:
+#    admin: 'ums:admin'
+#    resourceList: 'ums:resourceList'
+#    roleList: 'ums:roleList'
+#    standerList: 'ums:standerList'
+#    sysOrg: 'ums:sysOrg'
+#  expire:
+#    common: 86400
+#
+## 请求白名单
+#secure:
+#  ignored:
+#    urls:
+#      - /swagger-ui.html
+#      - /swagger-resources/**
+#      - /swagger/**
+#      - /**/v2/api-docs
+#      - /**/*.js
+#      - /**/*.css
+#      - /**/*.png
+#      - /**/*.jpg
+#      - /**/*.ico
+#      - /webjars/springfox-swagger-ui/**
+#      - /actuator/**
+#      - /druid/**
+#      - /*/user/login
+#      - /*/user/logout
+#      - /captcha.jpg
+#      - /*/ossFile/getYestodayFiles
+#      - /*/ossFile/deleteByFileId/*
+#      - /*/ossFile/deleteByFileIds
+#      - /*/ossFile/getByFileId/*
+#      - /*/info/getProjectInfoById/*
+#      - /*/stage/getStageById/*
+#      - /*/proProjectResult/getSimpleTreeList
+#      - /*/proProjectResult/getPartTreeList
+#      - /test
+#init:
+#  password: abcd1234
+#name: xiaoming4
+#
+#swagger:
+#  enabled: true

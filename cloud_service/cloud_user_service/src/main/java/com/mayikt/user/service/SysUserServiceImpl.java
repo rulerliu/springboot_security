@@ -89,7 +89,7 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
             AdminUserDetails adminUserDetails = (AdminUserDetails) userDetails;
             List<SysMenu> resourceList = adminUserDetails.getMenus();
             List<MenuTreeRspBO> menuTreeRspBOS = converToMenuTree(resourceList);
-            tokenMap.put("token", token);
+            tokenMap.put("token", tokenHead + " " + token);
             tokenMap.put("tokenHead", tokenHead);
             tokenMap.put("menuTreeList", menuTreeRspBOS);
             adminUserDetails.getSysUser().setPassword("");
@@ -103,14 +103,18 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
             record.setUserName(adminUserDetails.getSysUser().getUserName());
             UserAgent userAgent = UserAgentUtil.parse(userAgentStr);
             if (StringUtils.isBlank(userAgentStr)) {
-                record.setUserAgent(userAgent.getBrowser().getName());
+                record.setUserAgent(userAgent != null ? userAgent.getBrowser().getName() : null);
             } else {
                 record.setUserAgent(userAgentStr);
             }
             if (terminalType != null) {
                 record.setTerminalType(terminalType);
             } else {
-                record.setTerminalType(userAgent.isMobile() ? SystemConstant.TERMINAL_TYPE_3 : SystemConstant.TERMINAL_TYPE_1);
+                if (userAgent != null) {
+                    record.setTerminalType(userAgent.isMobile() ? SystemConstant.TERMINAL_TYPE_3 : SystemConstant.TERMINAL_TYPE_1);
+                } else {
+                    record.setTerminalType(null);
+                }
             }
             record.setUserAgent("");
             if (StringUtils.isBlank(ipAddr)) {
@@ -143,7 +147,7 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
             AdminUserDetails adminUserDetails = (AdminUserDetails) userDetails;
             List<SysMenu> resourceList = adminUserDetails.getMenus();
             List<MenuTreeRspBO> menuTreeRspBOS = converToMenuTree(resourceList);
-            tokenMap.put("token", token);
+            tokenMap.put("token", tokenHead + " " + token);
             tokenMap.put("tokenHead", tokenHead);
             tokenMap.put("userId", adminUserDetails.getSysUser().getUserId());
             tokenMap.put("userName", adminUserDetails.getSysUser().getUserName());
@@ -157,14 +161,18 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
             record.setUserName(adminUserDetails.getSysUser().getUserName());
             UserAgent userAgent = UserAgentUtil.parse(userAgentStr);
             if (StringUtils.isBlank(userAgentStr)) {
-                record.setUserAgent(userAgent.getBrowser().getName());
+                record.setUserAgent(userAgent != null ? userAgent.getBrowser().getName() : null);
             } else {
                 record.setUserAgent(userAgentStr);
             }
             if (terminalType != null) {
                 record.setTerminalType(terminalType);
             } else {
-                record.setTerminalType(userAgent.isMobile() ? SystemConstant.TERMINAL_TYPE_3 : SystemConstant.TERMINAL_TYPE_2);
+                if (userAgent != null) {
+                    record.setTerminalType(userAgent.isMobile() ? SystemConstant.TERMINAL_TYPE_3 : SystemConstant.TERMINAL_TYPE_2);
+                } else {
+                    record.setTerminalType(null);
+                }
             }
             record.setUserAgent("");
             if (StringUtils.isBlank(ipAddr)) {

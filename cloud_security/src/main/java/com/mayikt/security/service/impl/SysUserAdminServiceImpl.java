@@ -37,7 +37,7 @@ public class SysUserAdminServiceImpl implements SysUserAdminService {
     public AdminUserDetails loadUserByUsername(String userName, boolean reloadFlag) {
         SysUser sysUser = getSysUserByAccount(userName);
         if (sysUser == null) {
-            throw new UsernameNotFoundException("用户名或密码错误");
+            throw new UsernameNotFoundException("账号不存在");
         }
         if (!sysUser.getStatus().equals(1)) {
             throw new ApiException("账号被锁定");
@@ -96,7 +96,7 @@ public class SysUserAdminServiceImpl implements SysUserAdminService {
             return sysUser;
         }
         QueryWrapper<SysUser> queryWrapper = new QueryWrapper<>();
-        queryWrapper.lambda().eq(SysUser::getUserName, userName);
+        queryWrapper.lambda().eq(SysUser::getAccount, userName);
         List<SysUser> sysUsers = sysUserMapper.selectList(queryWrapper);
         if (!CollectionUtils.isEmpty(sysUsers)) {
             adminCacheService.setSysUser(sysUsers.get(0));

@@ -1,16 +1,16 @@
 package com.mayikt.user.model;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
-import java.io.Serializable;
-
 @Data
 @ApiModel(value = "用户")
 @TableName("sys_user")
-public class SysUser implements Serializable {
+public class SysUser {
+    @TableId("user_id")
     @ApiModelProperty(value = "用户ID")
     private Long userId;
 

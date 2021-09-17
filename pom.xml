@@ -24,7 +24,38 @@
         <java.version>1.8</java.version>
         <spring-cloud-alibaba.version>2.1.0.RELEASE</spring-cloud-alibaba.version>
         <boot-version>2.1.11.RELEASE</boot-version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <skipTests>true</skipTests>
+        <docker.maven.plugin.version>1.1.0</docker.maven.plugin.version>
+        <java.version>1.8</java.version>
+        <spring-cloud.version>Greenwich.SR2</spring-cloud.version>
+        <pagehelper-starter.version>1.2.10</pagehelper-starter.version>
+        <pagehelper.version>5.1.8</pagehelper.version>
+        <druid.version>1.1.10</druid.version>
+        <hutool.version>4.5.7</hutool.version>
+        <swagger2.version>2.7.0</swagger2.version>
+        <mybatis-generator.version>1.3.7</mybatis-generator.version>
+        <mybatis.version>3.4.6</mybatis.version>
+        <mybatis.spring.boot.version>1.3.0</mybatis.spring.boot.version>
+        <mysql-connector.version>8.0.15</mysql-connector.version>
+        <spring-data-commons.version>2.1.5.RELEASE</spring-data-commons.version>
+        <jjwt.version>0.9.0</jjwt.version>
+        <aliyun-oss.version>3.8.0</aliyun-oss.version>
+        <logstash-logback.version>5.3</logstash-logback.version>
+        <admin-starter-server.version>2.1.5</admin-starter-server.version>
+        <lombok.version>1.18.8</lombok.version>
+        <commons-pool2.version>2.5.0</commons-pool2.version>
+        <commons-lang3.version>3.8.1</commons-lang3.version>
+        <maven-surefire-plugin.version>2.5</maven-surefire-plugin.version>
+        <javax.validation>2.0.1.Final</javax.validation>
+        <fastjson.version>1.2.8</fastjson.version>
+        <kaptcha.version>2.3.2</kaptcha.version>
+        <xxl-job.version>2.2.0</xxl-job.version>
+        <sshj.version>0.29.0</sshj.version>
     </properties>
+
     <dependencies>
         <!-- web -->
         <dependency>
